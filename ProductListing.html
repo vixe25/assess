@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" type="text/css" href="CustomStyle.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cantarell:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap" rel="stylesheet">
+    <title>Pick n' Pay - Product Category</title>
+  </head>    
+  <body>
+
+
+  <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white navbar-toggleable-md">
+    <div class="container">
+        <button class="navbar-toggler toggler-example" type="button" data-toggle="collapse" data-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1" aria-expanded="false" aria-label="Toggle navigation"><span class="dark-blue-text"><i
+        class="fas fa-bars fa-1x"></i></span></button>
+        <a class="navbar-brand pl-2 rubik" href="LandingPage.html" >PICK <i class="fa fa-shopping-cart purpletext"></i> PAY</a>
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item">
+            <a class="nav-link px-2 dropdown-toggleone d-lg-block" href="#" >Search</a>
+          </li>
+          <li class="nav-item px-2 d-none d-lg-block">
+            <div class="dropdownall">
+              <button class="btn dropdown-toggle "type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">All</button>
+            </div> 
+          </li>
+          <li class="nav-item">
+            <div class="input-group-prepend searchbox">
+              <input class="btn  " type="search" placeholder="Enter any keyword" aria-label="Search">
+              <button class="btn" ><i class="fas fa-search"></i></button>
+            </div>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <div class="dropdown">
+            <a class="btn btn-default dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="badge badge-pill purple myCart" style="color: white" >0</span>
+              My Cart
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
+              <h6 style="margin-left: 90px">Shopping Cart</h6>
+              <div class="products"></div>
+              <div class="row pl-2">
+                <div class="col">
+                  <a class="btn btn-primary" id="allCategoriesButton" href="">VIEW CART</a>
+                </div>
+                <div class="col">
+                  <a class="btn purple" id="allCategoriesButton" href="">CHECKOUT</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>         
+      </div>
+  </nav>
+
+
+  <nav class="navbar fixed-top fixed-top-2 navbar-expand-lg navbar-light bg-white border-top border-bottom shadow-sm">
+    <div class="container ">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+          <li class="nav-item dropdown mr-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+            Shop by what you need
+            </a>
+          </li>
+          <li class="nav-item dropdown mr-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+            Categories
+            </a>
+          </li>
+          <li class="nav-item dropdown mr-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+            Today's Deals
+            </a>
+          </li>
+          <li class="nav-item dropdown mr-4">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: black">
+            My Shopping List
+            </a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">   
+          <li class="nav-item">
+            <a class="nav-link" href="login.html" style="color: black"><i class="far fa-user"></i> Login  &nbsp&nbsp&nbsp&nbsp |   &nbsp&nbsp</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" style="color: black">Sign up</a>
+          </li>            
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+   <!--  jumbotron -->
+  <div class="jumbotron mt-5 pl-5 mb-2" id="JumbotronHeaderImg">
+        <div class="container pl-5 pt-5">
+          <h2 class="pt-5 rubik">Groceries</h2>
+          <p>Farm fresh goods right at your doorstep.</p>
+          </div>
+         
+        </div>
+      </div>   
+  <div class="">
+        <div class="container pl-4"> 
+          <div class="row">
+          <div class="col-lg-9 pt-1"><h7>Shop/Products/Groceries</h7></div>
+          <div class="col-lg-1.5 px-0"><button class="btn btn-default">Shop by:</button></div>
+          <div class="col-lg-1.5"><a class="nav-link dropdown-toggle" href="#" id="priceHighest" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <b>Price Highest</b>
+              </a></div>
+          </div>
+        </div>
+  </div>
+
+  <div class="container pl-4">
+     <div class="row">
+      <div class="col-md-3">
+      
+          <p class="font-weight-bold">Categories</p>
+
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="all_prods" checked>
+          <label class="custom-control-label" for="all_prods">All Products</label>
+          </div>
+    
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="fresh_meat">
+          <label class="custom-control-label" for="fresh_meat">Fresh Meat</label>
+          </div>
+    
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="fresh_seafood">
+          <label class="custom-control-label" for="fresh_seafood">Fresh Seafood</label>
+          </div>
+    
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="fresh_fruits">
+          <label class="custom-control-label" for="fresh_fruits">Fresh Fruits</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="fresh_veg">
+          <label class="custom-control-label" for="fresh_veg">Fresh Vegetables</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input type="checkbox" class="custom-control-input" id="dairy">
+          <label class="custom-control-label" for="dairy">Dairy, Eggs & Chilled Food</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="bakery">
+          <label class="custom-control-label" for="bakery">Bakery</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="canned">
+          <label class="custom-control-label" for="canned">Canned & Packaged Food</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="health">
+          <label class="custom-control-label" for="health">Health & Wellness</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="snacks">
+          <label class="custom-control-label" for="snacks">Snacks & Sweets</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="babies">
+          <label class="custom-control-label" for="babies">Babies</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="frozen">
+          <label class="custom-control-label" for="frozen">Frozen Food</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="drinks">
+          <label class="custom-control-label" for="drinks">Drinks</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="alcohol">
+          <label class="custom-control-label" for="alcohol">Alcohol</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="beauty">
+          <label class="custom-control-label" for="beauty">Health & Beauty</label>
+          </div>
+
+          <hr>
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="sdd">
+          <label class="custom-control-label" for="sdd"><i class="fa fa-1x fa-history text-primary mr-2"></i>Same-Day Delivery</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="deals">
+          <label class="custom-control-label" for="deals"><i class="fa fa-tag fa-flip-horizontal text-danger mr-2"></i>Deals</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="most_liked">
+          <label class="custom-control-label" for="most_liked"><i class="far fa-heart purpletext" aria-hidden="true"></i> Most Liked</label>
+          </div>
+
+          <div class="custom-control custom-checkbox">
+          <input  type="checkbox" class="custom-control-input checkbox-custom" id="bulk_orders">
+          <label class="custom-control-label" for="bulk_orders"><i class="fa fa-cube mr-2" aria-hidden="true"></i>Bulk Orders</label>
+          </div>  
+        </div>
+        <div class="col">
+            
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <a href="#" data-toggle="modal" data-target="#JBL" class="nodeco">
+                <div class="card" >
+                <img class="card-img-top imagecrop2" src="https://www.jbl.com.ph/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc80fd537/450_black_angle_01-1606x1606px.jpg?sw=556&sh=680&sm=fit&sfrm=png" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">JBL T450</h6>
+                    <p class="card-text "><i class="far fa-heart purpletext"></i> 142 people liked this</p>
+                    <br>
+                    <p class="nunito purpletext">21% off</p>
+                    <h4><b>P 1699.00</b></h4>
+                </div>
+               </div>
+              </a>
+              
+            </div>
+
+            <!-- iPhone -->
+           <div class="col-12 col-md-6 col-lg-4 mb-3"  >
+            <a href="#" data-toggle="modal" data-target="#iPhone" class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://i.insider.com/59b82fed9803c524008b4f56?width=600&format=jpeg&auto=webp" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">iPhone 8</h6>
+                    <p class="card-text"><i class="far fa-heart purpletext"></i> 23 people liked this</p>
+                    <br>
+                   <br>
+                   <br>
+                    <h4><b>P 39490.00</b></h4>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <!-- Nswitch -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <a href="#" data-toggle="modal" data-target="#Nswich"  class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/nintendo-switch-new-package/gallery/bundle_color_console%20(3).jpg" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">Nintendo Switch</h6>
+                    <p class="card-text">
+                    <i class="far fa-heart purpletext"></i> 9 people liked this</p>
+                    <br>
+                   <p class="nunito purpletext"><b>10% off</b></p>
+                    <h4>P 19950.00</h4>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <a href="#" data-toggle="modal" data-target="#JBL" class="nodeco">
+                <div class="card" >
+                <img class="card-img-top imagecrop2" src="https://www.jbl.com.ph/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc80fd537/450_black_angle_01-1606x1606px.jpg?sw=556&sh=680&sm=fit&sfrm=png" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">JBL T450</h6>
+                    <p class="card-text "><i class="far fa-heart purpletext"></i> 142 people liked this</p>
+                    <br>
+                    <p class="nunito purpletext">21% off</p>
+                    <h4><b>P 1699.00</b></h4>
+                </div>
+               </div>
+              </a>
+              
+            </div>
+
+            <!-- iPhone -->
+           <div class="col-12 col-md-6 col-lg-4 mb-3"  >
+            <a href="#" data-toggle="modal" data-target="#iPhone" class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://i.insider.com/59b82fed9803c524008b4f56?width=600&format=jpeg&auto=webp" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">iPhone 8</h6>
+                    <p class="card-text"><i class="far fa-heart purpletext"></i> 23 people liked this</p>
+                    <br>
+                   <br>
+                   <br>
+                    <h4><b>P 39490.00</b></h4>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <!-- Nswitch -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <a href="#" data-toggle="modal" data-target="#Nswich"  class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/nintendo-switch-new-package/gallery/bundle_color_console%20(3).jpg" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">Nintendo Switch</h6>
+                    <p class="card-text">
+                    <i class="far fa-heart purpletext"></i> 9 people liked this</p>
+                    <br>
+                   <p class="nunito purpletext"><b>10% off</b></p>
+                    <h4>P 19950.00</h4>
+                </div>
+              </div>
+            </a>
+            </div>
+            
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+              <a href="#" data-toggle="modal" data-target="#JBL" class="nodeco">
+                <div class="card" >
+                <img class="card-img-top imagecrop2" src="https://www.jbl.com.ph/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc80fd537/450_black_angle_01-1606x1606px.jpg?sw=556&sh=680&sm=fit&sfrm=png" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">JBL T450</h6>
+                    <p class="card-text "><i class="far fa-heart purpletext"></i> 142 people liked this</p>
+                    <br>
+                    <p class="nunito purpletext">21% off</p>
+                    <h4><b>P 1699.00</b></h4>
+                </div>
+               </div>
+              </a>
+              
+            </div>
+
+            <!-- iPhone -->
+           <div class="col-12 col-md-6 col-lg-4 mb-3"  >
+            <a href="#" data-toggle="modal" data-target="#iPhone" class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://i.insider.com/59b82fed9803c524008b4f56?width=600&format=jpeg&auto=webp" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">iPhone 8</h6>
+                    <p class="card-text"><i class="far fa-heart purpletext"></i> 23 people liked this</p>
+                    <br>
+                   <br>
+                   <br>
+                    <h4><b>P 39490.00</b></h4>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <!-- Nswitch -->
+            <div class="col-12 col-md-6 col-lg-4 mb-3">
+                <a href="#" data-toggle="modal" data-target="#Nswich"  class="nodeco">
+              <div class="card">
+                <img class="card-img-top imagecrop2" src="https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/nintendo-switch-new-package/gallery/bundle_color_console%20(3).jpg" alt="">
+                <div class="card-body border-left">
+                    <h6 class="card-title">Nintendo Switch</h6>
+                    <p class="card-text">
+                    <i class="far fa-heart purpletext"></i> 9 people liked this</p>
+                    <br>
+                   <p class="nunito purpletext"><b>10% off</b></p>
+                    <h4>P 19950.00</h4>
+                </div>
+              </div>
+            </a>
+            </div>
+
+            <div class="col-12 text-center mt-3">
+                       
+                            <a class="btn btn-default" id="loadMoreProductsButton" href="ProductListing.html">LOAD MORE PRODUCTS</a>
+            </div>
+            
+        </div>
+
+      </div> <!-- end of container -->
+    </div>
+  </div>  
+
+
+
+
+        <!-- Modal Info -->
+
+        <div id="JBL" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content" id="productJBL">
+               
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <div class="modal-header">
+                    <button type="button" class=" btn-default cantarell" data-dismiss="modal" style="color: #a932e3; border: 2px solid #a932e3; height: 30px; width: 120px; font-size: 11">CLOSE</button>
+                </div>
+                     <img class="card-img-top imagecrop3" src="https://www.jbl.com.ph/dw/image/v2/AAUJ_PRD/on/demandware.static/-/Sites-masterCatalog_Harman/default/dwc80fd537/450_black_angle_01-1606x1606px.jpg?sw=556&sh=680&sm=fit&sfrm=png" alt=""
+                     style="max-width:100%;margin-top: 100px">
+                    </div>
+                    <div class="col-8">
+                      <h3 class="">JBL T450</h3>
+                      <p style="opacity: 60%;font-size: 15px;">Product info</p>
+                      <p>Introducing JBL T450 on-ear headphones. Under the hood, a pair of 32mm drivers punch out seriously powerful bass, reproducing the JBL Pure Bass sound you’ve experienced in concert halls, arenas and recording studios around the world. And since these are flat-folding, lightweight, comfortable and compact. With the convenience of tangle-free flat cable equipped with remote and microphones they’re your everyday companion at work, at home and on the road.</p>
+                        <div class="row">
+                          <div class="col-lg-2 pt-2">
+                            <p style="opacity: 60%;">Quantity</p>
+                          </div>  
+                          <div class="col-lg-auto">
+                            <div class="input-group">
+                                <div class="row">
+                                    <button class="btn decreaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: lightgray; color: white"> – </span></button>
+                                
+                                <input type="text" class="form-control text-center" value="1" style="border-radius: 25px; background: lightgray; color: black; width:50px;" name="item1-quantity" >
+                                
+                                     <button class="btn increaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: black; color: white" > + </span></button>
+                                </div>
+                            </div>                          
+                          </div>
+                        </div>
+                        <h3> <span class="">P 1699.00</span></h3>
+                        <div class="row">
+                          <div class="col-lg-4 mt-1">
+                           
+                              <a class="btn cantarel addToCartButton" style="background-color: #a932e3; font-size: 12px; color: white; font-weight: bold; width: 150px;"data-dismiss="modal"data-price="1699.00" data-name="JBL T450">ADD TO CART</a> </div>
+
+                              <div class="col-lg-8 mt-1"> Like this product? 
+                            <button class="btn btn-default "><i class="far fa-heart purpletext"></i>
+                             <span style="color:#a932e3;font-weight: bold;">142</span></button>
+                            
+                            
+                          </div>
+                        </div>
+                        <hr>
+                        <p style="opacity: 60%; font-size: 14px;">20% off all products when you order during November.</p>
+                        <p style="color: black;"><i class="fa fa-1x fa-history text-primary mr-2"></i> Same-Day Delivery</p>  
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Info 2 -->
+
+     <div id="iPhone" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content" id="productiPhone">
+               
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <div class="modal-header">
+                    <button type="button" class=" btn-default cantarell" data-dismiss="modal" style="color: #a932e3; border: 2px solid #a932e3; height: 30px; width: 120px; font-size: 11">CLOSE</button>
+                </div>
+                     <img class="card-img-top imagecrop3" src="https://i.insider.com/59b82fed9803c524008b4f56?width=600&format=jpeg&auto=webp" alt=""
+                     style="max-width:100%;margin-top: 100px">
+                    </div>
+                    <div class="col-8">
+                      <h3 class="item-name">iPhone 8</h3>
+                      <p style="opacity: 60%;font-size: 15px;">Product info</p>
+                      <p>Introducing JBL T450 on-ear headphones. Under the hood, a pair of 32mm drivers punch out seriously powerful bass, reproducing the JBL Pure Bass sound you’ve experienced in concert halls, arenas and recording studios around the world. And since these are flat-folding, lightweight, comfortable and compact. With the convenience of tangle-free flat cable equipped with remote and microphones they’re your everyday companion at work, at home and on the road.</p>
+                        <div class="row">
+                          <div class="col-lg-2 pt-2">
+                            <p style="opacity: 60%;">Quantity</p>
+                          </div>  
+                          <div class="col-lg-auto">
+                            <div class="input-group">
+                                <div class="row">
+                                    <button class="btn decreaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: lightgray; color: white"> – </span></button>
+                                
+                                <input type="text" class="form-control text-center" value="1" style="border-radius: 25px; background: lightgray; color: black; width:50px;" name="item2-quantity" >
+                                
+                                     <button class="btn increaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: black; color: white" > + </span></button>
+                                </div>
+                            </div>                          
+                          </div>
+                        </div>
+                        <h3> <span class="item-price">P 39490.00</span></h3>
+                        <div class="row">
+                          <div class="col-lg-4 mt-1">
+                           
+                              <a class="btn addToCartButton cantarel" style="background-color: #a932e3; font-size: 12px; color: white; font-weight: bold; width: 150px;"data-dismiss="modal" data-price="39400" data-name="iPhone 8">ADD TO CART</a> </div>
+
+                              <div class="col-lg-8 mt-1"> Like this product? 
+                            <button class="btn btn-default "><i class="far fa-heart purpletext"></i>
+                             <span style="color:#a932e3;font-weight: bold;">142</span></button>
+                            
+                            
+                          </div>
+                        </div>
+                        <hr>
+                        <p style="opacity: 60%; font-size: 14px;">20% off all products when you order during November.</p>
+                        <p style="color: black;"><i class="fa fa-1x fa-history text-primary mr-2"></i> Same-Day Delivery</p>  
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Info 3 -->
+
+     <div id="Nswich" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <!-- Modal content-->
+            <div class="modal-content" id="productNswitch">
+               
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-4 text-center">
+                      <div class="modal-header">
+                    <button type="button" class=" btn-default cantarell" data-dismiss="modal" style="color: #a932e3; border: 2px solid #a932e3; height: 30px; width: 120px; font-size: 11">CLOSE</button>
+                </div>
+                     <img class="card-img-top imagecrop3" src="https://www.nintendo.com/content/dam/noa/en_US/hardware/switch/nintendo-switch-new-package/gallery/bundle_color_console%20(3).jpg" alt=""
+                     style="max-width:100%;margin-top: 100px">
+                    </div>
+                    <div class="col-8">
+                      <h3 class="item-name">Nintendo Switch</h3>
+                      <p style="opacity: 60%;font-size: 15px;">Product info</p>
+                      <p>Introducing JBL T450 on-ear headphones. Under the hood, a pair of 32mm drivers punch out seriously powerful bass, reproducing the JBL Pure Bass sound you’ve experienced in concert halls, arenas and recording studios around the world. And since these are flat-folding, lightweight, comfortable and compact. With the convenience of tangle-free flat cable equipped with remote and microphones they’re your everyday companion at work, at home and on the road.</p>
+                        <div class="row">
+                          <div class="col-lg-2 pt-2">
+                            <p style="opacity: 60%;">Quantity</p>
+                          </div>  
+                         <div class="col-lg-auto">
+                            <div class="input-group">
+                                <div class="row">
+                                    <button class="btn decreaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: lightgray; color: white"> – </span></button>
+                                
+                                <input type="text" class="form-control text-center" value="1" style="border-radius: 25px; background: lightgray; color: black; width:50px;" name="item3-quantity" >
+                                
+                                     <button class="btn increaseQuantityButton"><span class=" badge-pill" style="margin: 10px; padding-bottom: 5px; background: black; color: white" > + </span></button>
+                                </div>
+                            </div>                          
+                          </div>
+                        </div>
+                        <h3> <span class="item-price">P 19950.00</span></h3>
+                        <div class="row">
+                          <div class="col-lg-4 mt-1">
+                           
+                              <a class="btn addToCartButton cantarel" style="background-color: #a932e3; font-size: 12px; color: white; font-weight: bold; width: 150px;"data-dismiss="modal" data-price="19950" data-name="Nintendo Switch">ADD TO CART</a> </div>
+
+                              <div class="col-lg-8 mt-1"> Like this product? 
+                            <button class="btn btn-default "><i class="far fa-heart purpletext"></i>
+                             <span style="color:#a932e3;font-weight: bold;">142</span></button>
+                            
+                            
+                          </div>
+                        </div>
+                        <hr>
+                        <p style="opacity: 60%; font-size: 14px;">20% off all products when you order during November.</p>
+                        <p style="color: black;"><i class="fa fa-1x fa-history text-primary mr-2"></i> Same-Day Delivery</p>  
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+<div style="background: #8e2abf; margin-top: 50px;">
+<div class="container">
+  <br>
+<div class="row">
+  <div class="col5">
+     <big><big><i class="fas fa-star" style="color: #a930ff"></i></big></big>
+     <small><small><i class="fas fa-star" style="color: white ; float: center;"></i></small></small><br>
+      <i class="fas fa-star" style="float: right"></i>
+  </div>
+  <div class="col">
+     <h5 class="text-white">Get recommendations, deals, tops, updates, <br>
+     promotions and more.</h5>
+  </div>
+   <div class="col-6 ">
+     <form class="form-inline">
+        <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <span class="input-group-text"> <i class="fas fa-envelope gray"></i></span>
+    </div>
+
+   <input class="form-control mr-sm-2" style="width: 50%" type="search" placeholder="Your email address" aria-label="Search">
+    <div class="signupbutton nunito whitetext" type="submit">SIGN UP</div>
+  </div>
+  </form>
+  </div>
+</div>
+ 
+ </div>
+ <br>
+</div>
+      <footer class="footer pb-5">
+        <br>
+          <div class="container pl-3">
+              <div class="row">
+                <div class="col-lg-4">
+                  <font class="rubik">
+                  <H5>PICK<i class="fa fa-shopping-cart purpletext"></i> PAY</H5> </font>
+              <div class="col-lg-4">
+
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="gray container pl-3 ">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="d-flex justify-content-start">
+              <div class="" style="padding-right: 20%">© Pick & Pay 2018. All Rights Reserved.</div>
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="d-flex justify-content-end">
+              <div class="px-3">About Pick & Pay</div>
+              <div class="px-3">Contact Us</div>
+              <div class="px-3">FAQs</div>
+              <div class="px-3">Terms & Conditions</div>
+              <div class="px-3">Privacy Policy</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+        </footer>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="shop.js"></script>
+  </body>
+</html>
